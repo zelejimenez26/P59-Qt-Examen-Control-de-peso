@@ -2,6 +2,10 @@
 #define PRINCIPAL_H
 
 #include <QMainWindow>
+#include <QMessageBox>
+#include <QPainter>
+
+#include "controlador.h"
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class Principal; }
@@ -15,7 +19,22 @@ public:
     Principal(QWidget *parent = nullptr);
     ~Principal();
 
+private slots:
+    void on_btnCalcular_clicked();
+
+    void on_actionNuevo_triggered();
+
 private:
     Ui::Principal *ui;
+    Controlador *m_controlador;
+    void calcular();
+    void limpiar();
+    void guardar();
+
+    //Para la grafica
+    QPixmap lienzo;
+    void dibujar();
+
+
 };
 #endif // PRINCIPAL_H
