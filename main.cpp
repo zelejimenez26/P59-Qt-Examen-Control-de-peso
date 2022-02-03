@@ -1,3 +1,8 @@
+/* Autor: Zelena Jimenez
+ * Fecha: 03/02/2022
+ * Grupo: 3
+ */
+
 #include "principal.h"
 
 #include <QApplication>

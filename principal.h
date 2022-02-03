@@ -4,7 +4,7 @@
 #include <QMainWindow>
 #include <QMessageBox>
 #include <QPainter>
-
+#include <QFile>
 #include "controlador.h"
 
 QT_BEGIN_NAMESPACE
@@ -23,6 +23,8 @@ private slots:
     void on_btnCalcular_clicked();
 
     void on_actionNuevo_triggered();
+
+    void on_btnGuardar_clicked();
 
 private:
     Ui::Principal *ui;

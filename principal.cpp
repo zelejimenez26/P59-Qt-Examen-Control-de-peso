@@ -36,7 +36,11 @@ void Principal::calcular()
     if(m_controlador->calcularMasaCorporal()){
         ui->outIMC->setText(QString::number(m_controlador->m_masaCorporal, 'f', 2) + " kg/m^2");
         ui->outDetalleMasa->setText(m_controlador->ObservacionPeso());
-        ui->outAltura->setText(QString::number(ui->inAltura->value()));
+        ui->outAltura->setText(QString::number(ui->inAltura->value())+ " m");
+        ui->outPactual->setText(QString::number(peso) + " kg");
+        ui->outPmax->setText(QString::number(peso) + " kg");
+        ui->outPmin->setText(QString::number(peso)+" kg");
+
     }else{
         QMessageBox::critical(
                     this,
@@ -61,6 +65,13 @@ void Principal::limpiar()
 
 void Principal::guardar()
 {
+    QFile archivo("resulatdo.txt");
+    if(archivo.open(QIODevice::Append|QIODevice::Text)){
+        QTextStream salida(&archivo);
+        salida<<m_controlador->datos()->toString();
+    }
+    //cerrar archivo
+    archivo.close();
 
 }
 
@@ -98,5 +109,11 @@ void Principal::on_btnCalcular_clicked()
 void Principal::on_actionNuevo_triggered()
 {
     limpiar();
+}
+
+
+void Principal::on_btnGuardar_clicked()
+{
+    guardar();
 }
 
