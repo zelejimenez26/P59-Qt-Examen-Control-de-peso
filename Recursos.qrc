@@ -1,0 +1,6 @@
+<RCC>
+    <qresource prefix="/">
+        <file>Recursos/bascula-de-bano.png</file>
+        <file>Recursos/balanza.png</file>
+    </qresource>
+</RCC>

@@ -19,6 +19,10 @@
   <property name="windowTitle">
    <string>Principal</string>
   </property>
+  <property name="windowIcon">
+   <iconset resource="Recursos.qrc">
+    <normaloff>:/Recursos/balanza.png</normaloff>:/Recursos/balanza.png</iconset>
+  </property>
   <widget class="QWidget" name="centralwidget">
    <widget class="QWidget" name="widget" native="true">
     <property name="geometry">
@@ -232,7 +236,7 @@
       <rect>
        <x>11</x>
        <y>478</y>
-       <width>321</width>
+       <width>371</width>
        <height>221</height>
       </rect>
      </property>
@@ -438,6 +442,8 @@
    </property>
   </action>
  </widget>
- <resources/>
+ <resources>
+  <include location="Recursos.qrc"/>
+ </resources>
  <connections/>
 </ui>
