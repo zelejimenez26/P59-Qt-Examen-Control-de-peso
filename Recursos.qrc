@@ -2,5 +2,6 @@
     <qresource prefix="/">
         <file>Recursos/bascula-de-bano.png</file>
         <file>Recursos/balanza.png</file>
+        <file>examen_jimenez_zelena_al.qm</file>
     </qresource>
 </RCC>

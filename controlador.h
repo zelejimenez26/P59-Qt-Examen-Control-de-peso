@@ -18,7 +18,6 @@ public:
     Datos *datos() const;
 
     double m_masaCorporal;
-    //QString m_obsPeso;
 
 signals:
 private:

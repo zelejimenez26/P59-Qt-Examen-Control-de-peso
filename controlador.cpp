@@ -4,7 +4,6 @@ Controlador::Controlador(QObject *parent) : QObject(parent)
 {
     this->m_datos=nullptr;
     this->m_masaCorporal=0;
-    //this->m_obsPeso="";
 }
 
 bool Controlador::agregarDatos(int dia, int mes, int anio, double altura, double peso)
@@ -51,7 +50,7 @@ QString Controlador::ObservacionPeso()
             obpeso="Obesidad extrema";
         }
     }
-    qDebug()<<obpeso;
+    //qDebug()<<obpeso;
     return obpeso;
 }
 
